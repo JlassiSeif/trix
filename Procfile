@@ -1,1 +1,1 @@
-web: python main.py
+web: web: gunicorn trix.wsgi
