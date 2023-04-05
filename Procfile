@@ -1,1 +1,1 @@
-web: web: gunicorn trix.wsgi
+web: gunicorn trix.wsgi
