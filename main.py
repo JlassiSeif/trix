@@ -1,5 +1,4 @@
 import socket
-import threading
 import time
 from src.deck import deck
 from src.logic import Logic
