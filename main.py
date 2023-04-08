@@ -11,7 +11,7 @@ def main():
     global client_fds
     server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    server_sock.bind(("127.0.0.1", 8080))
+    server_sock.bind(("0.0.0.0", 8080))
     server_sock.listen(MAX_CLIENTS)
     print("Server listening on port 8080...")
 

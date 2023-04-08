@@ -1,8 +1,0 @@
-{
-  "name": "Trix",
-  "description": "A server for Trix clients",
-  "image": "heroku/python",
-  "repository": "https://github.com/JlassiSeif/trix",
-  "keywords": ["python"],
-
-}
