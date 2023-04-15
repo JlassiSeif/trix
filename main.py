@@ -3,7 +3,7 @@ import time
 from src.deck import deck
 from src.logic import Logic
 
-MAX_CLIENTS = 4
+MAX_CLIENTS = 1
 client_fds = []
 
 
@@ -15,7 +15,7 @@ def main():
     server_sock.listen(MAX_CLIENTS)
     print("Server listening on port 8080...")
 
-    while len(client_fds) < 4:
+    while len(client_fds) < MAX_CLIENTS:
         client_sock, address = server_sock.accept()
         print(f"Client {client_sock} connected")
         client_fds.append(client_sock)
@@ -28,7 +28,7 @@ def main():
     time.sleep(1)
     end_game = False
     l = Logic(client_fds)
-    while not end_game and len(client_fds) == 4:
+    while not end_game and len(client_fds) == MAX_CLIENTS:
         end_game = l.step()
 
     # for fd in client_fds:
