@@ -1,10 +1,11 @@
 import socket
 
-# Get the hostname of the local machine
+# Get internal IP address
 hostname = socket.gethostname()
+internal_ip = socket.gethostbyname(hostname)
+print("Internal IP address:", internal_ip)
 
-# Get the IP address associated with the hostname
-ip_address = socket.gethostbyname(hostname)
+# Get external IP address
+external_ip = socket.get('https://api.ipify.org').text
+print("External IP address:", external_ip)
 
-# Print the current address
-print("Current address:", ip_address)
